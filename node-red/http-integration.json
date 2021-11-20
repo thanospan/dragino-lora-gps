@@ -1,0 +1,146 @@
+[
+    {
+        "id": "3b9f5dcc4b3444f6",
+        "type": "tab",
+        "label": "Dragino LoRa/GPS - HTTP Integration",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "766bd5212949f390",
+        "type": "http in",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "url": "/location",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "8fe6b80f612c60ca",
+                "be167ece77e851f9"
+            ]
+        ]
+    },
+    {
+        "id": "8fe6b80f612c60ca",
+        "type": "debug",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "edb670062decc838",
+        "type": "worldmap",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "lat": "38.28613",
+        "lon": "21.78684",
+        "zoom": "12",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "",
+        "maplist": "OSMG",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 580,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b6e9b2e97c2e3212",
+        "type": "function",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "func": "var name = \"Arduino-1\";\nvar lat = msg.payload.objectJSON.location.latitude;\nvar lon = msg.payload.objectJSON.location.longitude;\n\nmsg.payload = {\n    \"name\": name,\n    \"lat\": lat,\n    \"lon\": lon\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "8148524f9eced18b",
+                "edb670062decc838",
+                "ade39ccce859f540"
+            ]
+        ]
+    },
+    {
+        "id": "8148524f9eced18b",
+        "type": "debug",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "be167ece77e851f9",
+        "type": "json",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "property": "payload.objectJSON",
+        "action": "obj",
+        "pretty": false,
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "b6e9b2e97c2e3212"
+            ]
+        ]
+    },
+    {
+        "id": "ade39ccce859f540",
+        "type": "file",
+        "z": "3b9f5dcc4b3444f6",
+        "name": "",
+        "filename": "/usr/src/node-red/location.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    }
+]
