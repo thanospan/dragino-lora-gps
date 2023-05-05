@@ -2,7 +2,7 @@
 
 ## Hardware
 * [Arduino Uno Rev3](https://store.arduino.cc/products/arduino-uno-rev3/)
-* [Dragino LoRa/GPS Shield v1.2 + Dragino LoRa BEE v1.1](https://www.dragino.com/products/lora/item/108-lora-gps-shield.html)
+* [Dragino LoRa/GPS Shield v1.2 + Dragino LoRa BEE v1.1](https://www.dragino.com/downloads/downloads/datasheet/EN/Datasheet_Lora_GPS_Shield.pdf)
 * [2 Jumper wires M/F](https://i.imgur.com/cbF2qPO.png)
 <img src="https://i.imgur.com/nGpG10Z.jpg" width=60% height=auto>
 
