@@ -5,7 +5,7 @@
 * [Dragino LoRa/GPS Shield v1.2 + Dragino LoRa BEE v1.1](https://www.dragino.com/downloads/downloads/datasheet/EN/Datasheet_Lora_GPS_Shield.pdf)
 * [2 Jumper wires M/F](https://github.com/thanospan/dragino-lora-gps/assets/10052411/49a3f4ba-54bd-4146-8722-b48ea9717fb2)
 
-<img src="https://github.com/thanospan/dragino-lora-gps/assets/10052411/3891f6f5-7461-4838-89cc-31637bc0f311" width=60% height=60%>
+<img src="https://github.com/thanospan/dragino-lora-gps/assets/10052411/3891f6f5-7461-4838-89cc-31637bc0f311" width=60% height=auto>
 
 ## Software
 * [Arduino IDE v2.1.0](https://www.arduino.cc/en/software)
